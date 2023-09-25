@@ -5,20 +5,20 @@
 class Silver < Formula
   desc "reproduce the system"
   homepage "https://github.com/kijimaD/silver"
-  version "1.5.0"
+  version "1.5.2"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/kijimaD/silver/releases/download/v1.5.0/silver_Darwin_x86_64.tar.gz"
-      sha256 "c5b0065384e9a464dac6e90a605ff5e01710476f04321822fe4801db4ccd4ab4"
+    if Hardware::CPU.arm?
+      url "https://github.com/kijimaD/silver/releases/download/v1.5.2/silver_Darwin_arm64.tar.gz"
+      sha256 "f9f2630b7738c407c11ac0017e2336023b3b436e51b2f9c4e565242df6633f2f"
 
       def install
         bin.install "silver"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/kijimaD/silver/releases/download/v1.5.0/silver_Darwin_arm64.tar.gz"
-      sha256 "80769f7abd013e39c80923c645edee07c34c8e6575a6eebcf7237d5c0f940977"
+    if Hardware::CPU.intel?
+      url "https://github.com/kijimaD/silver/releases/download/v1.5.2/silver_Darwin_x86_64.tar.gz"
+      sha256 "3c867ed7b9689d2b994c487f89a04cf85e919fbbaf4496508e63da4bce9d2437"
 
       def install
         bin.install "silver"
@@ -28,16 +28,16 @@ class Silver < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kijimaD/silver/releases/download/v1.5.0/silver_Linux_arm64.tar.gz"
-      sha256 "8b3d71dd86c45cf5931640155da26d820de8cbbddcee796e78b9f938d6b9408e"
+      url "https://github.com/kijimaD/silver/releases/download/v1.5.2/silver_Linux_arm64.tar.gz"
+      sha256 "45af646ed6506f0b6f0795520120c9f0a189f94812b47828cc3d73648ab6f584"
 
       def install
         bin.install "silver"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kijimaD/silver/releases/download/v1.5.0/silver_Linux_x86_64.tar.gz"
-      sha256 "f83329f79e78859215348c0a799414ba397c0b9cb71b59260fe68f56c95275ae"
+      url "https://github.com/kijimaD/silver/releases/download/v1.5.2/silver_Linux_x86_64.tar.gz"
+      sha256 "649aa35a44e5ce1bfe35d7ac949ab06d6c8487f67615d112306f61f4797c47ac"
 
       def install
         bin.install "silver"
