@@ -5,20 +5,20 @@
 class Silver < Formula
   desc "reproduce the system"
   homepage "https://github.com/kijimaD/silver"
-  version "1.5.2"
+  version "1.5.3"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/kijimaD/silver/releases/download/v1.5.2/silver_Darwin_arm64.tar.gz"
-      sha256 "f9f2630b7738c407c11ac0017e2336023b3b436e51b2f9c4e565242df6633f2f"
+    if Hardware::CPU.intel?
+      url "https://github.com/kijimaD/silver/releases/download/v1.5.3/silver_Darwin_x86_64.tar.gz"
+      sha256 "a22c21b7ede8411aed1ca42944a2da2df6eb68490c08e25e0e9976e0b91ee587"
 
       def install
         bin.install "silver"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/kijimaD/silver/releases/download/v1.5.2/silver_Darwin_x86_64.tar.gz"
-      sha256 "3c867ed7b9689d2b994c487f89a04cf85e919fbbaf4496508e63da4bce9d2437"
+    if Hardware::CPU.arm?
+      url "https://github.com/kijimaD/silver/releases/download/v1.5.3/silver_Darwin_arm64.tar.gz"
+      sha256 "249592ae2e7714e6ea489419f4d6cb753fac7ae6c1bee8c052a2514bb5b3a74e"
 
       def install
         bin.install "silver"
@@ -27,17 +27,17 @@ class Silver < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kijimaD/silver/releases/download/v1.5.2/silver_Linux_arm64.tar.gz"
-      sha256 "45af646ed6506f0b6f0795520120c9f0a189f94812b47828cc3d73648ab6f584"
+    if Hardware::CPU.intel?
+      url "https://github.com/kijimaD/silver/releases/download/v1.5.3/silver_Linux_x86_64.tar.gz"
+      sha256 "64d589c5bb1a8c03d726293eca2957c1fd018061730f15e7d1a0f6bf26bc1944"
 
       def install
         bin.install "silver"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/kijimaD/silver/releases/download/v1.5.2/silver_Linux_x86_64.tar.gz"
-      sha256 "649aa35a44e5ce1bfe35d7ac949ab06d6c8487f67615d112306f61f4797c47ac"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/kijimaD/silver/releases/download/v1.5.3/silver_Linux_arm64.tar.gz"
+      sha256 "60146e3f2ead0f9db5c9aed093cf8a46be5b5dfab08a20d055cb9393656f3747"
 
       def install
         bin.install "silver"
