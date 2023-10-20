@@ -5,20 +5,20 @@
 class Upl < Formula
   desc "upload zip file to Tiny File Manager by CLI"
   homepage "https://github.com/kijimaD/upl"
-  version "0.1.2"
+  version "0.1.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kijimaD/upl/releases/download/v0.1.2/upl_Darwin_x86_64.tar.gz"
-      sha256 "3b96028af1da982cc6f34381e1dea4bec807ccf2163fab8cdb03e699582b4a59"
+      url "https://github.com/kijimaD/upl/releases/download/v0.1.3/upl_Darwin_x86_64.tar.gz"
+      sha256 "5b9d4d7765e19e2ab27ecf656a9e4188f13192d47d3f521ef7f566712eb3c0e1"
 
       def install
         bin.install "upl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kijimaD/upl/releases/download/v0.1.2/upl_Darwin_arm64.tar.gz"
-      sha256 "91598b680cb756b8cd510cee3b5580120478e07b16777b956eb37c10330c50a5"
+      url "https://github.com/kijimaD/upl/releases/download/v0.1.3/upl_Darwin_arm64.tar.gz"
+      sha256 "7293f0b906a3302d7c97549cb72e30d4f660b42b2e0f31af69c361c46335817a"
 
       def install
         bin.install "upl"
@@ -28,16 +28,16 @@ class Upl < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kijimaD/upl/releases/download/v0.1.2/upl_Linux_arm64.tar.gz"
-      sha256 "30379aa44eb03cc14494265fd2bad1dd3302d1db23d773b1ae7d9da4f83b5901"
+      url "https://github.com/kijimaD/upl/releases/download/v0.1.3/upl_Linux_arm64.tar.gz"
+      sha256 "3d13e92613513bd28356deaf3a7649abe94fcb6bf9bed44edd38d82161ce20b2"
 
       def install
         bin.install "upl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kijimaD/upl/releases/download/v0.1.2/upl_Linux_x86_64.tar.gz"
-      sha256 "40209da0dfb43b79f4a40e08579dd5dcc4a31dd135aa44810b3bf9c8b2bf4aad"
+      url "https://github.com/kijimaD/upl/releases/download/v0.1.3/upl_Linux_x86_64.tar.gz"
+      sha256 "6e74d78a6dd0b66738e088401da1c3b7a611eeb870f588f2a3568da24a4bed28"
 
       def install
         bin.install "upl"
