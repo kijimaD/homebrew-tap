@@ -5,20 +5,20 @@
 class Upl < Formula
   desc "upload zip file to Tiny File Manager by CLI"
   homepage "https://github.com/kijimaD/upl"
-  version "0.1.1"
+  version "0.1.2"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/kijimaD/upl/releases/download/v0.1.1/upl_Darwin_arm64.tar.gz"
-      sha256 "02b921c110b89293866058c1b88511d8b8ca6bfde355b7886da8f3a68ad58544"
+    if Hardware::CPU.intel?
+      url "https://github.com/kijimaD/upl/releases/download/v0.1.2/upl_Darwin_x86_64.tar.gz"
+      sha256 "3b96028af1da982cc6f34381e1dea4bec807ccf2163fab8cdb03e699582b4a59"
 
       def install
         bin.install "upl"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/kijimaD/upl/releases/download/v0.1.1/upl_Darwin_x86_64.tar.gz"
-      sha256 "4735bca0575a94fe93d1e4d64d3a3f89d30ef41a78528e87622c39ac727d3ee3"
+    if Hardware::CPU.arm?
+      url "https://github.com/kijimaD/upl/releases/download/v0.1.2/upl_Darwin_arm64.tar.gz"
+      sha256 "91598b680cb756b8cd510cee3b5580120478e07b16777b956eb37c10330c50a5"
 
       def install
         bin.install "upl"
@@ -28,16 +28,16 @@ class Upl < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kijimaD/upl/releases/download/v0.1.1/upl_Linux_arm64.tar.gz"
-      sha256 "2276a9f8d293ceb3aa7f8a1a383a8f85353d019e6e5a8bfa648bd110a0778e97"
+      url "https://github.com/kijimaD/upl/releases/download/v0.1.2/upl_Linux_arm64.tar.gz"
+      sha256 "30379aa44eb03cc14494265fd2bad1dd3302d1db23d773b1ae7d9da4f83b5901"
 
       def install
         bin.install "upl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kijimaD/upl/releases/download/v0.1.1/upl_Linux_x86_64.tar.gz"
-      sha256 "bb64a307da4fa3fb08fe721bf4bb6e6971473a85acf10c67c079ad4a86aafc92"
+      url "https://github.com/kijimaD/upl/releases/download/v0.1.2/upl_Linux_x86_64.tar.gz"
+      sha256 "40209da0dfb43b79f4a40e08579dd5dcc4a31dd135aa44810b3bf9c8b2bf4aad"
 
       def install
         bin.install "upl"
